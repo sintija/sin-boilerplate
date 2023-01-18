@@ -1,0 +1,19 @@
+{
+  "name": "sin-boilerplate",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack -p --progress --config webpack.config.build.js", 
+    "development": "webpack-dev-server --progress --config webpack.config.development.js",
+    "start": "npm run development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sintija/sin-boilerplate.git"
+  },
+  "author": "Sin Linuza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sintija/sin-boilerplate/issues"
+  },
+  "homepage": "https://github.com/sintija/sin-boilerplate#readme"
+}
