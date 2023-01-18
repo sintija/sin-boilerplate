@@ -8,10 +8,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const IS_DEVELOPMENT = process.env.NODE_ENV == "dev";
 
 const dirApp = path.join(__dirname, "app");
-const dirImages = path.join(__dirname, "images");
 const dirShared = path.join(__dirname, "shared");
 const dirStyles = path.join(__dirname, "styles");
-const dirVideos = path.join(__dirname, "videos");
 const dirNode = "node_modules";
 
 //console.log(dirApp, dirStyles);
@@ -20,7 +18,7 @@ module.exports = {
 	entry: [path.join(dirApp, "./index.js"), path.join(dirStyles, "index.scss")],
 
 	resolve: {
-		modules: [dirApp, dirImages, dirShared, dirStyles, dirVideos, dirNode],
+		modules: [dirApp, dirShared, dirStyles, dirNode],
 	},
 
 	plugins: [
@@ -76,9 +74,9 @@ module.exports = {
 				test: /\.(jpe?g|png|gif|svg|woff2?|fnt|webp)$/,
 				loader: "file-loader",
 				options: {
-					// name(file) {
-					// 	return '[hash].[ext]'
-					// }
+					name(file) {
+						return "[hash].[ext]";
+					},
 				},
 			},
 		],
