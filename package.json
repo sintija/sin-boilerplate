@@ -44,6 +44,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "terser-webpack-plugin": "^5.3.6"
+    "terser-webpack-plugin": "^5.3.6",
+    "url-search-params-polyfill": "^8.1.1"
   }
 }
